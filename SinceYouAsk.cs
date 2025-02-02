@@ -54,7 +54,7 @@ namespace RhubarbGeekNz.SinceYouAsk
                     }
                     else
                     {
-                        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX) || RuntimeInformation.IsOSPlatform(OSPlatform.Create("FreeBSD")))
                         {
                             var time = new timeval { tv_sec = 0, tv_usec = 0 };
                             var size = Marshal.SizeOf<timeval>();
